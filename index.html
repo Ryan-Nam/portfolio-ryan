@@ -45,7 +45,9 @@
           <li><a class="header__menu__item" href="#about">About</a></li>
           <li><a class="header__menu__item" href="#skills">Skills</a></li>
           <li><a class="header__menu__item" href="#work">My Work</a></li>
-          <li><a class="header__menu__item" href="#testimonial">Tesimonials</a></li>
+          <li>
+            <a class="header__menu__item" href="#testimonial">Tesimonials</a>
+          </li>
           <li><a class="header__menu__item" href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -54,9 +56,17 @@
     <main class="main">
       <!-- Home -->
       <section id="home">
-        <img class="home__avatar" src="images/profile.png" alt="Ryan's profile" />
-        <h2 class="home__title">Hello <br />I&#39;m <strong class="home__title--strong">Ryan</strong></h2>
-        <p class="home__description">A software engineer currently residing in Sydney, Australia</p>
+        <img
+          class="home__avatar"
+          src="images/profile.png"
+          alt="Ryan's profile"
+        />
+        <h2 class="home__title">
+          Hello <br />I&#39;m <strong class="home__title--strong">Ryan</strong>
+        </h2>
+        <p class="home__description">
+          A software engineer currently residing in Sydney, Australia
+        </p>
         <a class="home__contact" href="#contact">Contact Me</a>
       </section>
       <!-- About -->
@@ -106,63 +116,65 @@
       </section>
       <!-- Skills -->
       <section id="skills" class="section">
-        <h2 class="title">My Skills</h2>
-        <p class="des">Skills & Attributes</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, porro
-          provident? Ab alias, voluptatum asperiores maiores nihil, earum quos
-          exercitationem deserunt excepturi dicta quod magni numquam itaque sed
-          iusto eveniet.
-        </p>
-        <div>
-          <section>
-            <h3>Coding Skills</h3>
-            <ul>
-              <li>
-                <div><span>HTML</span><span>98%</span></div>
-                <div><div style="width: 98%"></div></div>
-              </li>
-              <li>
-                <div><span>CSS</span><span>90%</span></div>
-                <div><div style="width: 98%"></div></div>
-              </li>
-              <li>
-                <div><span>JS</span><span>90%</span></div>
-                <div><div style="width: 98%"></div></div>
-              </li>
-              <li>
-                <div><span>TS</span><span>80%</span></div>
-                <div><div style="width: 98%"></div></div>
-              </li>
-              <li>
-                <div><span>React</span><span>85%</span></div>
-                <div><div style="width: 98%"></div></div>
-              </li>
-              <li>
-                <div><span>HTML</span><span>68%</span></div>
-                <div><div style="width: 98%"></div></div>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h3>Tools</h3>
-            <ul>
-              <li>Visual Studio code</li>
-              <li>IntelliJ</li>
-              <li>Android Studio</li>
-              <li>IOS developnet</li>
-              <li>Swift</li>
-              <li>Sketch Group</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Etc</h3>
-            <ul>
-              <li>Git</li>
-              <li>Scrum Master</li>
-              <li>Math</li>
-            </ul>
-          </section>
+        <div class="max-container">
+          <h2 class="title">My Skills</h2>
+          <p class="des">Skills & Attributes</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+            porro provident? Ab alias, voluptatum asperiores maiores nihil,
+            earum quos exercitationem deserunt excepturi dicta quod magni
+            numquam itaque sed iusto eveniet.
+          </p>
+          <div class="skills">
+            <section class="skills__coding">
+              <h3 class="skills__title">Coding Skills</h3>
+              <ul>
+                <li>
+                  <div><span>HTML</span><span>98%</span></div>
+                  <div><div style="width: 98%"></div></div>
+                </li>
+                <li>
+                  <div><span>CSS</span><span>90%</span></div>
+                  <div><div style="width: 98%"></div></div>
+                </li>
+                <li>
+                  <div><span>JS</span><span>90%</span></div>
+                  <div><div style="width: 98%"></div></div>
+                </li>
+                <li>
+                  <div><span>TS</span><span>80%</span></div>
+                  <div><div style="width: 98%"></div></div>
+                </li>
+                <li>
+                  <div><span>React</span><span>85%</span></div>
+                  <div><div style="width: 98%"></div></div>
+                </li>
+                <li>
+                  <div><span>HTML</span><span>68%</span></div>
+                  <div><div style="width: 98%"></div></div>
+                </li>
+              </ul>
+            </section>
+            <section class="skills__tools">
+              <h3 class="skills__title">Tools</h3>
+              <ul>
+                <li>Visual Studio code</li>
+                <li>IntelliJ</li>
+                <li>Android Studio</li>
+                <li>IOS developnet</li>
+                <li>Swift</li>
+                <li>Sketch Group</li>
+              </ul>
+            </section>
+            <section class="skills__etc">
+              <h3 class="skills__title">Etc</h3>
+              <ul>
+                <li>Git</li>
+                <li>Scrum Master</li>
+                <li>Math</li>
+              </ul>
+            </section>
+          </div>
         </div>
       </section>
       <!-- Work -->
@@ -296,12 +308,20 @@
       <p class="des">ryannam.dev@gmail.com</p>
       <ul>
         <li>
-          <a href="http://github.com/ryan-nam" target="_blank" title="my gitbut link">
+          <a
+            href="http://github.com/ryan-nam"
+            target="_blank"
+            title="my gitbut link"
+          >
             <i class="fa-brands fa-github"></i>
           </a>
         </li>
         <li>
-          <a href="http://github.com/ryan-nam" target="_blank" title="my linkedin link">
+          <a
+            href="http://github.com/ryan-nam"
+            target="_blank"
+            title="my linkedin link"
+          >
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </li>
