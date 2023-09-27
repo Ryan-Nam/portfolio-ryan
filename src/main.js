@@ -33,3 +33,12 @@ document.addEventListener('scroll', () => {
 //     document.body.style.opacity = opacity;
 // });
 
+const arrowUp = document.querySelector('.arrow-up');
+// let maxScroll = 200; 
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY > homeHeight/2) {
+        arrowUp.style.opacity = 1
+    } else {
+        arrowUp.style.opacity = 0
+    }
+})
