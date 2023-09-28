@@ -40,8 +40,13 @@ document.addEventListener('scroll', () => {
 const navbarMenu = document.querySelector('.header__menu');
 const navbarToggle = document.querySelector('.header__toggle');
 navbarToggle.addEventListener('click', () => {
-    // .header__menu.open {
-    //     display: flex;
-    //   }
-    navbarMenu.classList.toggle('open')
+  // .header__menu.open {
+  //     display: flex;
+  //   }
+  navbarMenu.classList.toggle('open');
+});
+
+// When clikc Navbar, automatically close
+navbarMenu.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 });
