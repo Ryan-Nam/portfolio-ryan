@@ -33,12 +33,15 @@
       src="https://kit.fontawesome.com/0f0858aeee.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- JS -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active-menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -67,21 +70,24 @@
     <main class="main">
       <!-- Home -->
       <section id="home" class="observer">
-        <div class="home__container scroll-fade">
+        <div class="max-container home__container scroll-fade">
           <img
             class="home__avatar"
             src="images/profile.png"
             alt="Ryan's profile"
           />
-          <h2 class="home__title">
-            Hello <br />I&#39;m
-            <strong class="home__title--strong">Ryan</strong>
-          </h2>
-          <p class="home__description">
-            Software Engineer with 2 years of experience | Passionate about Tech
-            & Problem Solving | Based in Sydney
-          </p>
-          <a class="home__contact" href="#contact">Contact Me</a>
+          <div>
+            <h2 class="home__title" aria-label="Hello, I'm Software Dev, Ryan">
+              Hello <br />I&#39;m
+              <strong class="home__title--strong">Software Developer</strong>,
+              Ryan
+            </h2>
+            <p class="home__description">
+              Software Engineer with 2 years of experience | Passionate about
+              Tech & Problem Solving | Based in Sydney
+            </p>
+            <a class="home__contact" href="#contact">Contact Me</a>
+          </div>
         </div>
       </section>
       <!-- About -->
