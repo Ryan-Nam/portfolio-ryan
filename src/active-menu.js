@@ -1,27 +1,7 @@
 // 50% 이상 threshold되면, menu변경 - add Class
 // 빠지면 remove class
 
-// const options = {
-//     threshold: 0.5,
-// }
 
-// const callback = (entries) => {
-//     entries.forEach((entry)=> {
-//         console.log(entry);
-
-//         if(entry.isIntersecting) {
-//             entry.target.classList.add()
-//         }
-
-//     })
-
-// }
-
-// const observer = new IntersectionObserver(callback, options);
-// const sections = document.querySelectorAll('.observer');
-// sections.forEach((section)=>{
-//     observer.observe(section);
-// })
 
 const sectionIds = [
   '#home',
@@ -45,8 +25,12 @@ console.log(navItems); //(6) [a.header__menu__item.a
 //현재 섹션이 보여지고 있는지 아닌지의 배열의 boolean
 const visibleSections = sectionIds.map(() => false);
 
+// Default
+let activeNavItem = navItems[0];
+
 const options = {
-  threshold: 0.5,
+  rootMargin: '-20% 0px 0px 0px',
+  threshold: [0, 0.98],
 };
 const observer = new IntersectionObserver(observerCallback, options);
 sections.forEach((section) => observer.observe(section));
@@ -61,7 +45,7 @@ function observerCallback(entries) {
     selectLastOne =
       index === sectionIds.length - 1 &&
       entry.isIntersecting &&
-      entry.intersectionRatio >= 0.99;
+      entry.intersectionRatio >= 0.95;
     // console.log(entry.target.id);
     // console.log(index);
     // console.log(entry);
@@ -79,11 +63,20 @@ function observerCallback(entries) {
   const navIndex = selectLastOne
     ? sectionIds.length - 1
     : findFirtstIntersecting(visibleSections);
-    console.log(sectionIds[navIndex]);
+  console.log(sectionIds[navIndex]);
+
+  selectNavItem(navIndex);
 }
 
-function findFirtstIntersecting (intersections) {
-    const index = intersections.indexOf(true);
-    return index >= 0 ? index : 0
+function findFirtstIntersecting(intersections) {
+  const index = intersections.indexOf(true);
+  return index >= 0 ? index : 0;
+}
 
+function selectNavItem(index) {
+  const navItem = navItems[index];
+  if(!navItem) return;
+  activeNavItem.classList.remove('active');
+  activeNavItem = navItem;
+  activeNavItem.classList.add('active');
 }
