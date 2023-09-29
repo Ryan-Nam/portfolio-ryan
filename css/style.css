@@ -145,6 +145,7 @@ button:focus {
 
 /* Home Section */
 #home {
+    position: relative;
   background-color: var(--color-primary);
   color: var(--color-text);
   padding: 5rem 1rem;
@@ -188,6 +189,27 @@ button:focus {
   background-color: transparent;
   color: var(--color-text);
   outline: 2px solid var(--color-accent);
+}
+
+.home__divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.home__divider svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 77px;
+}
+
+.home__divider .shape-fill {
+    fill: #FFFFFF;
 }
 
 /* About */
@@ -245,6 +267,7 @@ button:focus {
 
 /* Skills */
 #skills {
+    position: relative;
   background-color: var(--color-primary-variant);
   color: var(--color-text);
 }
@@ -304,6 +327,27 @@ button:focus {
 .bar__value {
   background-color: var(--color-accent);
   height: 3px;
+}
+
+.skills__divier {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.skills__divier svg {
+    position: relative;
+    display: block;
+    width: calc(183% + 1.3px);
+    height: 82px;
+}
+
+.skills__divier .shape-fill {
+    fill: var(--color-primary);
 }
 
 /* Work */
@@ -470,6 +514,7 @@ button:focus {
 
 /* Footer */
 #contact {
+    position: relative;
   background-color: var(--color-primary);
   color: var(--color-text);
 }
@@ -487,6 +532,28 @@ button:focus {
 }
 .contact__link:hover {
   color: var(--color-accent);
+}
+
+
+
+.contact__divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.contact__divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 96px;
+}
+
+.contact__divider .shape-fill {
+    fill: #FFFFFF;
 }
 
 @media screen and (max-width: 768px) {
